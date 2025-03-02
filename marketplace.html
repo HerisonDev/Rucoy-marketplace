@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rucoy Online</title>
+    <link rel="stylesheet" href="/css/style_marketplace.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="img-container">
+            <img src="https://www.rucoyonline.com/assets/banner-f95a2ba62cd7f75d8a597d38cae8db786759ec4f3bba42efc9fae155fe338c74.png"
+                alt="Banner">
+        </div>
+        <div id="opt-container">
+            <p class="p-rucoy">Rucoy Online</p>
+            <a href="welcome.html">
+                <p class="p-welcome">Welcome</p>
+            </a>
+            <p class="p-news">News</p>
+            <p class="p-highscore">Highscores</p>
+            <p class="p-char">Characters</p>
+            <p class="p-guilds">Guilds</p>
+            <a href="marketplace.html">
+                <p class="p-marketplace">Marketplace</p>
+            </a>
+            <p class="p-player">Rucoy Bosses</p>
+            <div id="btn-opt">
+                <h2></h2>
+                <h2></h2>
+                <h2></h2>
+            </div>
+        </div>
+
+        <div id="opt-hidden">
+            <a href="welcome.html">
+                <p class="p-welcome-h">Welcome</p>
+            </a>
+            <p class="p-news-h">News</p>
+            <p class="p-highscore-h">Highscores</p>
+            <p class="p-char-h">Characters</p>
+            <p class="p-guilds-h">Guilds</p>
+            <a href="marketplace.html">
+                <p class="p-marketplace-h">Marketplace</p>
+            </a>
+            <p class="p-player">Rucoy Bosses</p>
+        </div>
+        <div id="search-panel">
+            <div id="search-header-input">
+                <h3>Search for an item</h3>
+                <input type="text" placeholder="Item Name" id="input-search">
+                <div id="selecao-raridade-preco">
+                    <label>Rarity: </label>
+                    <select name="raridade" id="selecao" onchange="search()">
+                        <option selected value="">Any</option>
+                        <option value="Common">Common</option>
+                        <option value="Uncommon">Uncommon</option>
+                        <option value="Rare">Rare</option>
+                        <option value="Ultra rare">Ultra rare</option>
+                        <option value="Legendary">Legendary</option>
+                        <option value="Mythic">Mythic</option>
+                    </select>
+                    <label id="label-price">Max price: </label>
+                    <input type="text" id="price-input" placeholder="Eg. 1.000.000" oninput="search()">
+                </div>
+
+            </div>
+            <div id="search-count"></div>
+        </div>
+        <div id="result-panel">
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/searchImpl.js"></script>
+</body>
+
+</html>
